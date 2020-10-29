@@ -1,10 +1,8 @@
 # dotfiles
 
-Setup:
-
 ```bash
-# Add custom config, aliases and functions to your .*rc file without
-# needing to overwrite it (allows for environment-specific configs):
+# Add custom config, aliases and functions to .*rc file without
+# needing to overwrite it:
 echo ". ~/path/to/dotfiles/.jbrc" >> {.bashrc|.zshrc}
 
 # Setup vim files and link from this location:
