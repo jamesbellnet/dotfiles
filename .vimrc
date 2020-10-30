@@ -73,7 +73,7 @@ endif
 let g:palenight_terminal_italics=1
 
 " Turn on line numbers
-set number
+" set number
 
 " Always show current position
 set ruler
@@ -106,10 +106,6 @@ set ffs=unix,dos,mac
 
 " Set to auto read when a file is changed from the outside
 set autoread
-
-" Switch between buffers easily
-nnoremap <C-j> :bprev<CR>
-nnoremap <C-k> :bnext<CR>
 
 " Automatically source the vimrc file on save
 augroup autosourcing

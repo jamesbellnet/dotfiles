@@ -3,6 +3,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'drewtempelmeyer/palenight.vim'
+Plug 'digitaltoad/vim-pug'
 
 " Initialize plugin system
 call plug#end()
