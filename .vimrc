@@ -14,7 +14,9 @@ syntax enable
 " Set theme
 set background=dark
 
-colorscheme palenight
+if &runtimepath =~? "palenight"
+    colorscheme palenight
+endif
 
 if (has("termguicolors"))
   set termguicolors
