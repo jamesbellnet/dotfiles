@@ -14,7 +14,8 @@ git init --bare ~/.dotfiles
 
 # Create a git alias that references the git dotfiles repository and the $HOME
 # directory from which git adds and tracks files by default
-echo "alias dotfiles=\"/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME\"" >> {~/.bashrc|~/.zshrc}
+echo "alias dotfiles=\"/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME\"" \
+>> {~/.bashrc|~/.zshrc}
 
 # Source the contents of {.bashrc/.zshrc} to make the alias available to us
 source {~/.bashrc|~/.zshrc}
