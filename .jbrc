@@ -33,6 +33,7 @@ alias ~="cd ~"
 alias la="ls -a"
 
 # Quick edit configs
+alias jbrc="vi ~/.jbrc"
 alias bashrc="vi ~/.bashrc"
 alias zshrc="vi ~/.zshrc"
 alias vimrc="vi ~/.vimrc"
@@ -45,7 +46,6 @@ elif [ -n "$ZSH_VERSION" ]; then
 fi
 
 # Git
-alias commit="git add . && git commit -m"
 alias gpuo="git push -u origin"
 
 ################################################################################
@@ -57,3 +57,4 @@ cd() {
     builtin cd "$@"
     ls -a
 }
+
