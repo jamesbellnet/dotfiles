@@ -29,20 +29,20 @@ fi
 ################################################################################
 
 # Quick shortcuts
-alias ~="cd ~" 
+alias ~="cd $HOME" 
 alias la="ls -a"
 
 # Quick edit configs
-alias jbrc="vi ~/.jbrc"
-alias bashrc="vi ~/.bashrc"
-alias zshrc="vi ~/.zshrc"
-alias vimrc="vi ~/.vimrc"
+alias jbrc="vi $HOME/.jbrc"
+alias bashrc="vi $HOME/.bashrc"
+alias zshrc="vi $HOME/.zshrc"
+alias vimrc="vi $HOME/.vimrc"
 
 # Reload terminal
 if [ -n "$BASH_VERSION" ]; then
-    alias reload='source ~/.bashrc'
+    alias reload="source $HOME/.bashrc"
 elif [ -n "$ZSH_VERSION" ]; then
-    alias reload='source ~/.zshrc'
+    alias reload="source $HOME/.zshrc"
 fi
 
 # Git
