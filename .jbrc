@@ -29,7 +29,6 @@ fi
 ################################################################################
 
 # Quick shortcuts
-alias ~="cd $HOME" 
 alias la="ls -a"
 
 # Quick edit configs
