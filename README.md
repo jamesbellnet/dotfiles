@@ -12,27 +12,27 @@ mkdir ~/.dotfiles
 # Initialize a bare repository in the directory we just created
 git init --bare ~/.dotfiles
 
-# Create a git alias that references the new bare dotfiles repository and the $HOME
-# directory from which git adds and tracks files by default
+# Create a git alias that references the new bare dotfiles repository and the
+# $HOME directory from which git adds and tracks files by default
 echo "alias dotfiles=\"/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME\"" \
->> {~/.bashrc|~/.zshrc}
+>> ~/.bashrc
 
-# Source the contents of {.bashrc/.zshrc} to make the alias available to us
-source {~/.bashrc|~/.zshrc}
+# Source the contents of ~/.bashrc to make the alias available to us
+source ~/.bashrc
 
 # Configure the dotfiles bare repository to hide untracked files (prevents
 # us from seeing all files and folders in $HOME in 'dotfiles status'
 dotfiles config status.showUntrackedFiles no
 
 # Add the remote location to the repository
-dotfiles remote add origin https://github.com/jamesbellnet/dotfiles.git
+dotfiles remote add origin git@github.com:jamesbellnet/dotfiles.git
 
 # Pull the repository into the $HOME directory (ensure no folders/files from
 # the repository currently exist in $HOME)
-dotfiles pull https://github.com/jamesbellnet/dotfiles.git 
+dotfiles pull git@github.com:jamesbellnet/dotfiles.git
 
 # Load custom config
-echo ". $HOME/.jbrc" >> {~/.bashrc|~/.zshrc} && source {~/.bashrc|~/.zshrc}
+echo ". $HOME/.jbrc" >> ~/.bashrc && source ~/.bashrc
 
 # Configure vim
 vi ~/.vimrc # or just vimrc if using .jbrc aliases
