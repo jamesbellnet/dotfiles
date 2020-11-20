@@ -34,6 +34,9 @@ dotfiles pull git@github.com:jamesbellnet/dotfiles.git
 # Load custom config
 echo ". $HOME/.jbrc" >> ~/.bashrc && source ~/.bashrc
 
+# Set the remote upstream for shorthand push/pull
+dotfiles branch --set-upstream-to=origin/master master
+
 # Configure vim
 vi ~/.vimrc # or just vimrc if using .jbrc aliases
 :so % # Source the .vimrc file
