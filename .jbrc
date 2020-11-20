@@ -2,27 +2,30 @@
 ################################### CONFIG #####################################
 ################################################################################
 
-# Bash-specific configs
-if [ -n "$BASH_VERSION" ]; then
-    # Case-insensitive auto completion
-    bind 'set completion-ignore-case on'
+# Case-insensitive auto completion
+bind 'set completion-ignore-case on'
 
-    # Tab cycles through auto completion matches
-    bind 'TAB:menu-complete'
+# Tab cycles through auto completion matches
+bind 'TAB:menu-complete'
 
-    # Show a list of the matching files
-    bind 'set show-all-if-ambiguous on'
+# Show a list of the matching files
+bind 'set show-all-if-ambiguous on'
 
-    # Cycle through history based on characters already typed on the line
-    bind '"\e[A":history-search-backward'
-    bind '"\e[B":history-search-forward'
-fi
+# Cycle through history based on characters already typed on the line
+bind '"\e[A":history-search-backward'
+bind '"\e[B":history-search-forward'
 
-# Zsh-specific configs
-if [ -n "$ZSH_VERSION" ]; then
-    bindkey '^[[A' up-line-or-search
-    bindkey '^[[B' down-line-or-search
-fi
+# Don't put duplicate lines or lines starting with space in the history
+HISTCONTROL=ignoreboth
+
+# Append to the history file, don't overwrite it
+shopt -s histappend
+
+# Set the amount of commands/lines to store in memory for this session
+HISTSIZE=1000
+
+# Set the amount of commands/lines to write to the history file
+HISTFILESIZE=2000
 
 ################################################################################
 ################################### ALIASES ####################################
@@ -34,15 +37,10 @@ alias la="ls -a"
 # Quick edit configs
 alias jbrc="vi $HOME/.jbrc"
 alias bashrc="vi $HOME/.bashrc"
-alias zshrc="vi $HOME/.zshrc"
 alias vimrc="vi $HOME/.vimrc"
 
 # Reload terminal
-if [ -n "$BASH_VERSION" ]; then
-    alias reload="source $HOME/.bashrc"
-elif [ -n "$ZSH_VERSION" ]; then
-    alias reload="source $HOME/.zshrc"
-fi
+alias reload="source $HOME/.bashrc"
 
 # Git
 alias gpuo="git push -u origin"
