@@ -44,6 +44,7 @@ alias reload="source $HOME/.bashrc"
 
 # Git
 alias gpuo="git push -u origin"
+alias gcb="git checkout -b"
 
 ################################################################################
 ################################## FUNCTIONS ###################################
