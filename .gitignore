@@ -1,6 +1,7 @@
 .DS_Store
 .localized
 .env
+tags
 node_modules/
 vendor/
 
