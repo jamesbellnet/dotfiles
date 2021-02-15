@@ -5,23 +5,17 @@
 " Load defaults.vim 
 source $VIMRUNTIME/defaults.vim
 
-" Load plugins
-source $HOME/.vim/plugins.vim
-
 " Enable syntax highlighting
 syntax enable
 
 " Set theme
 set background=dark
 
-silent! colorscheme palenight
+silent! colorscheme delek
 
 if (has("termguicolors"))
   set termguicolors
 endif
-
-" let g:palenight_terminal_italics=1
-" highlight Comment cterm=italic
 
 " Set tab and auto-indenting sizes
 set tabstop=2
