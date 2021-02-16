@@ -11,7 +11,7 @@ syntax enable
 " Set theme
 set background=dark
 
-silent! colorscheme delek
+silent! colorscheme default
 
 if (has("termguicolors"))
   set termguicolors
