@@ -10,12 +10,7 @@ syntax enable
 
 " Set theme
 set background=dark
-
-silent! colorscheme default
-
-if (has("termguicolors"))
-  set termguicolors
-endif
+colorscheme default
 
 " Set tab and auto-indenting sizes
 set tabstop=2
