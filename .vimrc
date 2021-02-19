@@ -5,6 +5,9 @@
 " Load defaults.vim 
 source $VIMRUNTIME/defaults.vim
 
+" Load plugins
+" source $HOME/.vim/plugins.vim
+
 " Enable syntax highlighting
 syntax enable
 
