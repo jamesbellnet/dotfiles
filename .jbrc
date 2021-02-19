@@ -15,6 +15,16 @@ bind 'set show-all-if-ambiguous on'
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
 
+# Set the amount of commands/lines to store in memory for this session
+HISTSIZE=999999
+
+# Set the amount of commands/lines to write to the history file
+HISTFILESIZE=999999
+
+# Write the last command to the history and automatically import it for
+# use between shells
+export PROMPT_COMMAND='history -a;history -r'
+
 # Append to the history file, don't overwrite it
 shopt -s histappend
 
