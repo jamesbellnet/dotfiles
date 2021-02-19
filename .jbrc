@@ -15,17 +15,8 @@ bind 'set show-all-if-ambiguous on'
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
 
-# Don't put duplicate lines or lines starting with space in the history
-HISTCONTROL=ignoreboth
-
 # Append to the history file, don't overwrite it
 shopt -s histappend
-
-# Set the amount of commands/lines to store in memory for this session
-HISTSIZE=1000
-
-# Set the amount of commands/lines to write to the history file
-HISTFILESIZE=2000
 
 ################################################################################
 ################################### ALIASES ####################################
