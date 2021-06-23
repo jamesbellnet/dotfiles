@@ -33,6 +33,7 @@ shopt -s histappend
 ################################################################################
 
 # Quick shortcuts
+alias ~="cd ~"
 alias la="ls -a"
 
 # Quick edit configs
