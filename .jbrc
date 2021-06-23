@@ -28,6 +28,13 @@ export PROMPT_COMMAND='history -a;history -r'
 # Append to the history file, don't overwrite it
 shopt -s histappend
 
+# Colours
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+
+# Prompt
+export PS1="\[\033[m\][\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h\[\033[m\] \[\033[33;1m\]\W\[\033[m\]]\$ "
+
 ################################################################################
 ################################### ALIASES ####################################
 ################################################################################
@@ -57,4 +64,3 @@ cd() {
     builtin cd "$@"
     ls -a
 }
-
