@@ -2,12 +2,6 @@
 "-------- JB ---------"
 "---------------------"
 
-" Load defaults.vim 
-source $VIMRUNTIME/defaults.vim
-
-" Load plugins
-source $HOME/.vim/plugins.vim
-
 " Enable syntax highlighting
 syntax enable
 
@@ -21,6 +15,21 @@ set shiftwidth=2
 
 " Tab inserts as spaces
 set expandtab
+
+" Auto indent
+set autoindent
+
+" Trim trailing whitespace
+autocmd BufWritePre * :%s/\s\+$//e
+
+" Set utf8 as standard encoding and en_US as the standard language
+set encoding=utf8
+
+" Use Unix as the standard file type
+set ffs=unix,dos,mac
+
+" Set to auto read when a file is changed from the outside
+set autoread
 
 " Always show current position
 set ruler
@@ -40,18 +49,8 @@ set nobackup
 set nowb
 set noswapfile
 
-" Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
-
-" Use Unix as the standard file type
-set ffs=unix,dos,mac
-
-" Set to auto read when a file is changed from the outside
-set autoread
-
 " Automatically source the vimrc file on save
 augroup autosourcing
 	autocmd!
 	autocmd BufWritePost .vimrc source %
 augroup END
-
