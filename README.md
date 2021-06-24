@@ -40,12 +40,6 @@ dotfiles fetch
 # Set the remote upstream for shorthand push/pull
 dotfiles branch --set-upstream-to=origin/master master
 
-# Configure vim
-vi ~/.vimrc # or just vimrc if using .jbrc aliases
-:so % # Source the .vimrc file
-:PlugInstall # Install the plugins
-:so % # Source the .vimrc again for good measure
-
 # OPTIONAL - use the .gitignore file from this repository as a global .gitignore
 git config --global core.excludesFile "~/.gitignore"
 
